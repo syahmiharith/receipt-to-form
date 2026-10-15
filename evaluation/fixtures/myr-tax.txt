@@ -1,0 +1,9 @@
+SYNTHETIC - NOT A REAL PURCHASE
+Orchid Demo Cafe
+Category: Food & Beverage
+Date: 2026-01-15
+Tea  10.00
+Cake  12.00
+Subtotal  22.00
+Tax 6%  1.32
+TOTAL MYR 23.32
