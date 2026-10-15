@@ -1,0 +1,8 @@
+SYNTHETIC - NOT A REAL PURCHASE
+Maple Demo Diner
+Category: Food & Beverage
+Date: 2026-02-10
+Lunch  15.00
+Tax  1.50
+Tip  2.00
+TOTAL USD 18.50

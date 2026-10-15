@@ -1,0 +1,83 @@
+{
+  "mode": "mock",
+  "predictions": [
+    {
+      "id": "myr-tax",
+      "extraction": {
+        "merchantName": "Orchid Demo Cafe",
+        "receiptType": "Food & Beverage",
+        "date": "2026-01-15",
+        "totalAmount": 23.32,
+        "currency": "MYR",
+        "confidence": "high",
+        "notes": [],
+        "items": []
+      }
+    },
+    {
+      "id": "usd-tip",
+      "extraction": {
+        "merchantName": "Maple Demo Diner",
+        "receiptType": "Food & Beverage",
+        "date": "2026-02-10",
+        "totalAmount": 16.5,
+        "currency": "USD",
+        "confidence": "high",
+        "notes": [],
+        "items": []
+      }
+    },
+    {
+      "id": "krw-grouping",
+      "extraction": {
+        "merchantName": "Demo Seoul Market",
+        "receiptType": "Groceries",
+        "date": "2026-03-02",
+        "totalAmount": 12500,
+        "currency": "KRW",
+        "confidence": "high",
+        "notes": [],
+        "items": []
+      }
+    },
+    {
+      "id": "discount",
+      "extraction": {
+        "merchantName": "Demo Paper Shop",
+        "receiptType": "Retail",
+        "date": "2026-04-04",
+        "totalAmount": 9,
+        "currency": "EUR",
+        "confidence": "high",
+        "notes": [],
+        "items": []
+      }
+    },
+    {
+      "id": "missing-date",
+      "extraction": {
+        "merchantName": "Demo Transit",
+        "receiptType": "Transport",
+        "date": null,
+        "totalAmount": 4.5,
+        "currency": "SGD",
+        "confidence": "low",
+        "notes": [],
+        "items": []
+      }
+    },
+    {
+      "id": "unreadable-total",
+      "extraction": {
+        "merchantName": "Demo Corner Store",
+        "receiptType": "Groceries",
+        "date": "2026-06-12",
+        "totalAmount": null,
+        "currency": "MYR",
+        "confidence": "low",
+        "notes": [],
+        "items": []
+      }
+    }
+  ]
+}

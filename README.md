@@ -1,4 +1,4 @@
-# AI Receipt-to-Form Auto-Fill
+# AI Receipt Extractor
 
 Gemini-powered receipt extraction web app built for the TP Malaysia AI Intern assessment. The app turns receipt images into structured, reviewable data through a CloudConvert-style processing queue: upload receipts, extract selected files, review uncertain fields, and download only complete JSON outputs.
 
@@ -8,7 +8,7 @@ Gemini-powered receipt extraction web app built for the TP Malaysia AI Intern as
 
 **Setup shortcuts:** [Getting Started](#getting-started) · [Deployment](#deployment)
 
-**Reviewer docs:** [Testing Guide](./TESTING.md) · [Assessment Handoff](./docs/ASSESSMENT_HANDOFF.md) · [Demo Script](./docs/DEMO_SCRIPT.md)
+**Reviewer docs:** [Synthetic Evaluation](./evaluation/README.md) · [Testing Guide](./TESTING.md) · [Assessment Handoff](./docs/ASSESSMENT_HANDOFF.md) · [Demo Script](./docs/DEMO_SCRIPT.md)
 
 ## Quick Path
 

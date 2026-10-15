@@ -227,3 +227,7 @@ GEMINI_MODEL=gemini-2.5-flash
 ## Known Test Design Decision
 
 Gemini is mocked in default automated E2E tests because real AI calls can fail due to quota, model latency, temporary service load, or minor output variance. The live Gemini test is separate so reviewers can validate real integration deliberately without making CI flaky.
+
+## Offline labelled receipt evaluation
+
+See [Synthetic receipt evaluation](./evaluation/README.md) for the committed synthetic PNGs, labels, scoring definitions and recorded-output format. `npm run test` includes scorer regression tests; `npm run eval:receipts` reports authored mock scores only, with unmeasured provider latency/cost left null. The live Gemini smoke test is connectivity coverage, not an accuracy benchmark.

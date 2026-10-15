@@ -8,7 +8,7 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --max-warnings=0",
-    "test": "vitest run",
+    "test": "vitest run && npm run test:eval",
     "test:watch": "vitest",
     "test:unit": "vitest run tests/unit",
     "test:api": "vitest run tests/api",
@@ -19,7 +19,9 @@
     "audit": "npm audit --audit-level=moderate",
     "audit:prod": "npm audit --omit=dev --audit-level=moderate",
     "test:all": "npm run lint && npm run typecheck && npm run build && npm run test && npm run test:e2e",
-    "ci": "npm run lint && npm run typecheck && npm run build && npm run test"
+    "ci": "npm run lint && npm run typecheck && npm run build && npm run test",
+    "eval:receipts": "node evaluation/score.mjs evaluation/mock-predictions.json",
+    "test:eval": "node --test evaluation/score.test.mjs"
   },
   "engines": {
     "node": ">=20.19.0"

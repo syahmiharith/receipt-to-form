@@ -1,0 +1,78 @@
+{
+  "dataset": "synthetic-receipts-v1",
+  "synthetic": true,
+  "receipts": [
+    {
+      "id": "myr-tax",
+      "image": "fixtures/myr-tax.png",
+      "transcript": "fixtures/myr-tax.txt",
+      "expected": {
+        "merchantName": "Orchid Demo Cafe",
+        "receiptType": "Food & Beverage",
+        "date": "2026-01-15",
+        "totalAmount": 23.32,
+        "currency": "MYR"
+      }
+    },
+    {
+      "id": "usd-tip",
+      "image": "fixtures/usd-tip.png",
+      "transcript": "fixtures/usd-tip.txt",
+      "expected": {
+        "merchantName": "Maple Demo Diner",
+        "receiptType": "Food & Beverage",
+        "date": "2026-02-10",
+        "totalAmount": 18.5,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "krw-grouping",
+      "image": "fixtures/krw-grouping.png",
+      "transcript": "fixtures/krw-grouping.txt",
+      "expected": {
+        "merchantName": "Demo Seoul Market",
+        "receiptType": "Groceries",
+        "date": "2026-03-02",
+        "totalAmount": 12500,
+        "currency": "KRW"
+      }
+    },
+    {
+      "id": "discount",
+      "image": "fixtures/discount.png",
+      "transcript": "fixtures/discount.txt",
+      "expected": {
+        "merchantName": "Demo Paper Shop",
+        "receiptType": "Retail",
+        "date": "2026-04-04",
+        "totalAmount": 9,
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "missing-date",
+      "image": "fixtures/missing-date.png",
+      "transcript": "fixtures/missing-date.txt",
+      "expected": {
+        "merchantName": "Demo Transit",
+        "receiptType": "Transport",
+        "date": null,
+        "totalAmount": 4.5,
+        "currency": "SGD"
+      }
+    },
+    {
+      "id": "unreadable-total",
+      "image": "fixtures/unreadable-total.png",
+      "transcript": "fixtures/unreadable-total.txt",
+      "expected": {
+        "merchantName": "Demo Corner Store",
+        "receiptType": "Groceries",
+        "date": "2026-06-12",
+        "totalAmount": null,
+        "currency": "MYR"
+      }
+    }
+  ]
+}
