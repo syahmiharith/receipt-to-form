@@ -4,8 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Receipt-to-Form Auto-Fill",
-  description: "AI Intern Assessment web app for extracting receipt fields and auto-filling an editable form."
+  title: "Receipt-to-Form",
+  description: "AI-assisted receipt extraction with editable human review and structured JSON export."
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

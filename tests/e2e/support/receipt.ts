@@ -225,7 +225,7 @@ export async function createGeneratedReceiptPng(page: Page) {
     context.fillStyle = "#111827";
     context.textBaseline = "top";
     context.font = "700 44px Arial, sans-serif";
-    context.fillText("TP INTERN TEST MART", 80, 80);
+    context.fillText("SAMPLE RECEIPT MART", 80, 80);
     context.font = "28px Arial, sans-serif";
     context.fillText("Date: 2026-05-11", 80, 245);
     context.fillText("Coffee", 80, 420);

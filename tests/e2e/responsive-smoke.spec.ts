@@ -13,6 +13,12 @@ test.describe("responsive receipt queue smoke", () => {
     await mockExtractionResponse(page, highConfidenceExtraction);
     await gotoHome(page);
 
+    await expect(page).toHaveTitle("Receipt-to-Form");
+    await expect(page.getByText("Receipt-to-Form", { exact: true })).toBeVisible();
+    await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+      "content",
+      "AI-assisted receipt extraction with editable human review and structured JSON export."
+    );
     await expect(page.locator("main")).toBeVisible();
     await uploadReceipt(page);
     await extractButton(page, /Extract 1 file/i).click();

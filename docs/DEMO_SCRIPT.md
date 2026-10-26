@@ -4,7 +4,7 @@ Target length: 60 to 90 seconds.
 
 ## Opening
 
-This is an AI receipt-to-form auto-fill app for the AI Intern assessment. It uses Gemini Vision to extract structured receipt data, then keeps a human review step before any result can be downloaded.
+Receipt-to-Form is an AI-assisted receipt extraction and review app. It uses Gemini Vision to extract structured receipt data, then keeps a human review step before any result can be downloaded.
 
 ## Walkthrough
 

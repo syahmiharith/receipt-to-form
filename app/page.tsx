@@ -210,7 +210,7 @@ function AppHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 px-4 py-3 backdrop-blur sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
-        <p className="truncate text-sm font-bold text-slate-950">AI Receipt-to-Form Auto-Fill</p>
+        <p className="truncate text-sm font-bold text-slate-950">Receipt-to-Form</p>
       </div>
     </header>
   );

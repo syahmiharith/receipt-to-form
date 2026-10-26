@@ -1,18 +1,20 @@
-# AI Receipt-to-Form Auto-Fill
+# Receipt-to-Form
 
-Gemini-powered receipt extraction web app built for the TP Malaysia AI Intern assessment. The app turns receipt images into structured, reviewable data through a CloudConvert-style processing queue: upload receipts, extract selected files, review uncertain fields, and download only complete JSON outputs.
+Gemini-powered receipt extraction and human-review web app. The app turns receipt images into structured, reviewable data through a CloudConvert-style processing queue: upload receipts, extract selected files, review uncertain fields, and download only complete JSON outputs.
 
-**Open the live assessment app:** <https://tp-intern-malaysia.vercel.app/>
+**Run the app:** follow [Getting Started](#getting-started).
 
-**Watch the 1-2 minute demo:** [syahmiharith-ai-intern-assessment.mp4](./docs/demo/syahmiharith-ai-intern-assessment.mp4)
+**Existing hosted demo:** <https://tp-intern-malaysia.vercel.app/> (legacy deployment address; hosting has not been renamed).
+
+**Walkthrough:** [Demo Script](./docs/DEMO_SCRIPT.md). The earlier recording is retained in Git history, not presented as a current UI demonstration.
 
 **Setup shortcuts:** [Getting Started](#getting-started) · [Deployment](#deployment)
 
-**Reviewer docs:** [Testing Guide](./TESTING.md) · [Assessment Handoff](./docs/ASSESSMENT_HANDOFF.md) · [Demo Script](./docs/DEMO_SCRIPT.md)
+**Reviewer docs:** [Testing Guide](./TESTING.md) · [Review Guide](./docs/REVIEW_GUIDE.md) · [Demo Script](./docs/DEMO_SCRIPT.md)
 
 ## Quick Path
 
-1. Open the live demo.
+1. Start the local app or open the existing hosted demo.
 2. Upload one to five JPG, PNG, or WEBP receipt images.
 3. Select the files to process and click **Extract**.
 4. Preview receipts, review extracted fields, and fix any `Needs review` result using the inline receipt preview.
@@ -21,7 +23,7 @@ Gemini-powered receipt extraction web app built for the TP Malaysia AI Intern as
 
 ## Why This Is More Than An API Call
 
-The assessment asks for receipt upload, generative AI extraction, editable review, and structured output. I implemented that as a human-in-the-loop extraction queue rather than a single throwaway form.
+The workflow combines receipt upload, generative AI extraction, editable review, and structured output in a human-in-the-loop extraction queue.
 
 Key product decisions:
 
@@ -285,5 +287,9 @@ http://localhost:3000
 - Only image receipts are supported; PDF support is intentionally out of scope.
 - Extraction quality depends on receipt clarity and Gemini availability.
 - Queue state is client-side only and resets on refresh.
-- Rate limiting is in-memory, which is suitable for the assessment but not a distributed production limiter.
+- Rate limiting is in-memory, and is not a distributed production limiter.
 - A production version could add durable storage, authentication, OCR fallbacks, audit history, and Redis or Vercel KV rate limiting.
+
+## Project Origin
+
+Originally developed as a recruitment assessment, this repository is presented as a portfolio project. It is not a production client system or a claim of employment. The original development history and MIT license are preserved.

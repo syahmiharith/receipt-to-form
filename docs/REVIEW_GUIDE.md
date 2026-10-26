@@ -1,10 +1,10 @@
-# Assessment Handoff
+# Review Guide
 
-Quick reviewer path for the TP Malaysia AI Intern assessment.
+Quick reviewer path for Receipt-to-Form.
 
 ## What To Review First
 
-1. Open the live app: <https://tp-intern-malaysia.vercel.app/>.
+1. Run the app locally using the commands below. See the README for the existing hosted demo.
 2. Upload one to five receipt images.
 3. Select the files to process and click **Extract**.
 4. Open the preview modal to inspect the uploaded image.
@@ -35,7 +35,7 @@ GEMINI_MODEL=gemini-2.5-flash
 
 `GEMINI_API_KEY` is required for real extraction. `GEMINI_MODEL` is optional.
 
-## Assessment Signals
+## Engineering Highlights
 
 - Uses a server-side API route so the Gemini key is not exposed to the browser.
 - Handles file type and file size validation on the client and API boundary.
@@ -50,4 +50,4 @@ GEMINI_MODEL=gemini-2.5-flash
 
 ## Known Scope
 
-The app intentionally keeps queue state in the browser and uses a single extraction API route. Durable persistence, authentication, PDF support, real Google Drive upload, URL upload, and accounting-system integrations are outside this assessment version.
+The app intentionally keeps queue state in the browser and uses a single extraction API route. Durable persistence, authentication, PDF support, real Google Drive upload, URL upload, and accounting-system integrations are outside this portfolio version.

@@ -52,7 +52,7 @@ describe("Home page receipt queue", () => {
 
     expect(screen.getByText("Upload receipt files")).toBeInTheDocument();
     expect(screen.getByText(/JPG, PNG, WEBP/i)).toBeInTheDocument();
-    expect(screen.getByText("AI Receipt-to-Form Auto-Fill")).toBeInTheDocument();
+    expect(screen.getByText("Receipt-to-Form")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /Human-reviewed AI receipt extraction/i })).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: /Extract/i })).not.toBeInTheDocument();
   });
