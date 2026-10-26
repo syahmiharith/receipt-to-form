@@ -14,3 +14,6 @@ playwright-report
 test-results
 .env
 *.tsbuildinfo
+
+# Local browser debugging output
+.playwright-mcp/
