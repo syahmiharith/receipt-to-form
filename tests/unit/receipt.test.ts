@@ -59,9 +59,50 @@ describe("receiptExtractionSchema", () => {
     expect(result.notes).toEqual([]);
     expect(result.items).toEqual([]);
   });
+
+  it("preserves nullable line items and defaults omitted quantities", () => {
+    const result = receiptExtractionSchema.parse({
+      merchantName: null,
+      date: null,
+      totalAmount: null,
+      currency: null,
+      items: [{ name: "  Coffee  ", value: null }]
+    });
+
+    expect(result.items).toEqual([{ name: "Coffee", quantity: null, value: null }]);
+  });
+
+  it("rejects invalid collection elements instead of returning an extraction", () => {
+    const extraction = {
+      merchantName: null,
+      date: null,
+      totalAmount: null,
+      currency: null
+    };
+
+    expect(receiptExtractionSchema.safeParse({ ...extraction, notes: [42] }).success).toBe(false);
+    expect(receiptExtractionSchema.safeParse({ ...extraction, items: [{ name: "Coffee", value: "8.90" }] }).success).toBe(false);
+  });
 });
 
 describe("normalizeReceiptExtraction", () => {
+  it("turns missing raw fields and unknown provider fields into a reviewable draft", () => {
+    const result = normalizeReceiptExtraction({ providerMetadata: { source: "fixture" } });
+
+    expect(result).toMatchObject({
+      merchantName: null,
+      receiptType: null,
+      date: null,
+      totalAmount: null,
+      currency: null,
+      confidence: "low",
+      items: []
+    });
+    expect(result.notes).toHaveLength(5);
+    expect(result).not.toHaveProperty("providerMetadata");
+    expect(isExtractionComplete(result)).toBe(false);
+  });
+
   it("normalizes amount, currency, merchant, type, date, notes, and items", () => {
     const result = normalizeReceiptExtraction({
       merchantName: "  Tealive  ",

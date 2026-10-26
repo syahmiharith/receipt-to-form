@@ -1,6 +1,6 @@
 # Testing Guide
 
-This project uses layered tests so the assessment can be reviewed with confidence without depending on Gemini uptime for every run.
+This project uses layered tests so the application can be reviewed with confidence without depending on Gemini uptime for every run.
 
 ## Test Layers
 
@@ -17,7 +17,7 @@ This project uses layered tests so the assessment can be reviewed with confidenc
 | Production audit | `npm run audit:prod` | Check runtime dependency vulnerabilities. |
 | Full local gate | `npm run test:all` | Run lint, typecheck, build, Vitest, and mocked E2E tests. |
 
-## Recommended Pre-Submission Commands
+## Recommended Validation Commands
 
 Run the full deterministic gate:
 
@@ -186,7 +186,7 @@ It intentionally avoids exact-value assertions because generative extraction can
 
 ## Manual QA Checklist
 
-Before final submission, manually test with at least:
+Before a release or demonstration, manually test with at least:
 
 1. A clear Malaysian receipt with MYR.
 2. A clear Korean receipt with KRW.
